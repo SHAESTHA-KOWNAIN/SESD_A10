@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>E-commerce Demo (HTML/CSS/JS)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">EcomDemo</div>
+    <nav>
+      <button id="viewProductsBtn" class="nav-btn active">Products</button>
+      <button id="viewOrdersBtn" class="nav-btn">My Orders</button>
+      <button id="viewCartBtn" class="nav-btn">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main id="app" class="container">
+    <!-- Products view -->
+    <section id="productsView" class="view">
+      <h1>Products</h1>
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+    <!-- Cart / Checkout view -->
+    <section id="cartView" class="view hidden">
+      <h1>Your Cart</h1>
+      <div id="cartList"></div>
+      <div class="checkout">
+        <h3>Checkout</h3>
+        <label>
+          Name
+          <input id="customerName" type="text" placeholder="Your name" />
+        </label>
+        <label>
+          Address
+          <input id="customerAddress" type="text" placeholder="Shipping address" />
+        </label>
+        <button id="placeOrderBtn" class="primary">Place Order (Mock Payment)</button>
+        <div id="checkoutMsg" class="muted"></div>
+      </div>
+    </section>
+
+    <!-- Orders / Tracking view -->
+    <section id="ordersView" class="view hidden">
+      <h1>My Orders</h1>
+      <div id="ordersList"></div>
+      <div id="orderDetail" class="order-detail hidden"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Demo app — front-end only. Inventory & orders persist in your browser (localStorage).</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
